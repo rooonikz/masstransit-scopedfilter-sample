@@ -14,6 +14,7 @@ namespace MassTransit.ScopedFilter.Sample.Consumers
 
         public Task Consume(ConsumeContext<Test2> context)
         {
+            throw new Exception();
             Console.WriteLine(_provider.Get().Tenant);
             return Task.CompletedTask;
         }

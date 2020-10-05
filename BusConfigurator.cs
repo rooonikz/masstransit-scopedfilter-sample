@@ -34,7 +34,7 @@ namespace MassTransit.ScopedFilter.Sample
                                     TimeSpan.FromSeconds(1.0),
                                     TimeSpan.FromSeconds(1.5),
                                     TimeSpan.FromSeconds(2)));
-                            cfg.UseInMemoryOutbox();
+                            //cfg.UseInMemoryOutbox();
                         }
                     };
 

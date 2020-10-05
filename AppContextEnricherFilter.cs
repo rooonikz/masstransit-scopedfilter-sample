@@ -8,10 +8,12 @@ namespace MassTransit.ScopedFilter.Sample
            where TMessage : class
     {
         private readonly IAppContextProvider _appContextProvider;
+        private readonly IServiceProvider _serviceProvider;
 
-        public AppContextEnricherFilter(IAppContextProvider appContextProvider)
+        public AppContextEnricherFilter(IAppContextProvider appContextProvider, IServiceProvider serviceProvider)
         {
             _appContextProvider = appContextProvider;
+            _serviceProvider = serviceProvider;
         }
 
         public Task Send(SendContext<TMessage> context, IPipe<SendContext<TMessage>> next)
